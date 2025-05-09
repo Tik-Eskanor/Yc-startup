@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local"
 import { SessionProvider } from "next-auth/react";
 import "./globals.css";
@@ -33,7 +32,7 @@ const workSans = localFont({
       style: 'normal',
     },
     {
-      path: './fonts/WorkSans-LIght.ttf',
+      path: './fonts/WorkSans-Light.ttf',
       weight: '200',
       style: 'normal',
     },
