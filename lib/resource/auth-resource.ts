@@ -1,6 +1,6 @@
 export const logIn = async (email:string|null|undefined)=>
     {
-        const response = await fetch(`http://localhost:4000/api/auth/signin`, {
+        const response = await fetch(`https://yc-startup-express-backend.onrender.com/api/auth/signin`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const logIn = async (email:string|null|undefined)=>
 
     export const signup = async (userData:Author)=>
       {
-          const response = await fetch(`http://localhost:4000/api/auth/signup`, {
+          const response = await fetch(`https://yc-startup-express-backend.onrender.com/api/auth/signup`, {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export const logIn = async (email:string|null|undefined)=>
               body: JSON.stringify({
                   ...userData
                 })})
-  
+
         if(!response.ok)
         { 
           throw new Error(`Something went wrong with response`)

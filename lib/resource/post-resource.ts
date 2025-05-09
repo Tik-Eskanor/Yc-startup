@@ -3,7 +3,7 @@ export const getStartups = async (query:string|undefined)=>
 {
   if(query !== undefined)
   {
-    const response = await fetch(`http://localhost:4000/api/startup/search/?query=${query}`)
+    const response = await fetch(`https://yc-startup-express-backend.onrender.com/api/startup/search/?query=${query}`)
     if(!response.ok)
     {
         await response.json()
@@ -14,7 +14,7 @@ export const getStartups = async (query:string|undefined)=>
     return data
   }
 
-  const response = await fetch('http://localhost:4000/api/startup/all',{next:{revalidate:20}})
+  const response = await fetch('https://yc-startup-express-backend.onrender.com/api/startup/all',{next:{revalidate:20}})
   if(!response.ok)
   {
     throw new Error(`Something went wrong! ${response.status} ${response.statusText}`)
@@ -26,7 +26,7 @@ export const getStartups = async (query:string|undefined)=>
 
 export const getStartup = async (id:string)=>
   {
-    const response = await fetch(`http://localhost:4000/api/startup/${id}`)
+    const response = await fetch(`https://yc-startup-express-backend.onrender.com/api/startup/${id}`)
     if(!response.status)
     {
       return {success:false,data:undefined}
@@ -39,7 +39,7 @@ export const getStartup = async (id:string)=>
   
 export const getViews = async (id:string)=>
   {
-    const response = await fetch(`http://localhost:4000/api/startup/${id}`)
+    const response = await fetch(`https://yc-startup-express-backend.onrender.com/api/startup/${id}`)
     if(!response.ok)
       {
         throw new Error(`Something went wrong! ${response.status} ${response.statusText}`)
@@ -51,7 +51,7 @@ export const getViews = async (id:string)=>
 
 export const updateViews = async (id:string)=>
   {
-    const response = await fetch(`http://localhost:4000/api/startup/views/${id}`, {
+    const response = await fetch(`https://yc-startup-express-backend.onrender.com/api/startup/views/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

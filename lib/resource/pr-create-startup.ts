@@ -2,7 +2,6 @@
 
 import z from "zod"
 import { StartupFormSchema } from "../validation/startupFormSchema"
-import { redirect } from "next/navigation"
 export const createStartup = async(prevState:unknown, formData:FormData)=>{
 
     try {
@@ -18,7 +17,7 @@ export const createStartup = async(prevState:unknown, formData:FormData)=>{
   
       const validatedData =  await StartupFormSchema.parseAsync(formValues)
       
-      const response = await fetch("http://localhost:4000/api/startup/create",{
+      const response = await fetch("https://yc-startup-express-backend.onrender.com/api/startup/create",{
       method:'POST',
       headers:{
         'Content-Type':'application/json',

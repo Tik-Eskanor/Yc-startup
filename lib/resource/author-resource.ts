@@ -1,7 +1,7 @@
 
 export const getAuthor= async (id:string)=>
 {
-  const response = await fetch(`http://localhost:4000/api/author/${id}`)
+  const response = await fetch(`https://yc-startup-express-backend.onrender.com/api/author/${id}`)
   if(!response.status)
   {
     return {success:false,data:undefined}
@@ -13,7 +13,7 @@ export const getAuthor= async (id:string)=>
 
 export const getAuthorStartups = async (id:strimg)=>
 {
-  const response = await fetch(`http://localhost:4000/api/author/startups/${id}`)
+  const response = await fetch(`https://yc-startup-express-backend.onrender.com/api/author/startups/${id}`)
   if(!response.status)
   {
     return {success:false,data:undefined}
