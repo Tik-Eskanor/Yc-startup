@@ -5,7 +5,7 @@ import { Search } from 'lucide-react'
 async function SearchForm({query}:{query?:string}) {
 
   return (
-    <Form action="/" scroll={false} className='search-form mb-3 md:mb-0'>
+    <Form action="/" scroll={false} className='search-form mb-5 md:mb-0'>
       <input name='query'
              className='flex-1 border-0 py-1 focus:outline-0'
              placeholder='Search startus'
