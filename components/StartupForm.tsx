@@ -1,10 +1,10 @@
 "use client"
 
 import { useActionState, useState } from "react"
-import { Input } from "../components/ui/input"
-import { Textarea } from "../components/ui/textarea"
+import { Input } from "./ui/input"
+import { Textarea } from "./ui/textarea"
 import MDEditor from '@uiw/react-md-editor';
-import { Button } from "../components/ui/button";
+import { Button } from "./ui/button";
 import { Send } from "lucide-react";
 import { createStartup } from "@/lib/resource/pr-create-startup"
 import { useSession } from "next-auth/react";
